@@ -1,0 +1,281 @@
+body {
+    /* background-image: url(../img/background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    backdrop-filter: brightness(60%); */
+    background-color: #141A1D;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.65;
+    font-size: 1.2rem;
+}
+
+
+.logo img {
+    width: 200px;
+}
+
+header {
+    top: 0;
+    position: sticky;
+    z-index: 1000;
+}
+
+.navigazione {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 15px 0px;
+    background-color: #141A1D;
+}
+
+.navigazione div {
+    display: inline;
+    padding: 0px 100px;
+}
+
+.navigazione a:link,
+.navigazione a:visited {
+    text-decoration: none;
+    color: rgb(133, 130, 130);
+    transition-duration: 0.3s;
+}
+
+.navigazione a:hover {
+    color: white;
+}
+
+
+#articoloPrimo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#video {
+    width: 100%;
+    height: 800px;
+}
+
+#video video {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.contenuto {
+    position: absolute;
+    top: 250px;
+    width: 1500px;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+}
+
+.contenuto svg {
+    fill: rgba(255, 255, 255, 0.6);
+    width: 120px;
+}
+
+h1,
+h2,
+.contenuto p {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+h1 {
+    font-size: 4.8em;
+    font-weight: 900;
+    letter-spacing: 10px;
+}
+
+
+.spin {
+    animation: spin 10s linear infinite, opacity 4s linear
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animated {
+    animation: opacity 4s linear;
+}
+
+
+.contenuto p {
+    /* text-shadow: 2px 2px 4px #000000; */
+    font-size: 1.6em;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+
+#schede {
+    position: absolute;
+    top: 720px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.scheda1 {
+    margin: 40px;
+    font-size: 0.8em !important;
+    /* text-shadow: 2px 2px 4px #000000; */
+}
+
+
+.scheda1 h2 {
+    font-weight: bolder;
+    padding-top: 25px;
+}
+
+#schede svg {
+    fill: rgba(255, 255, 255, 0.6);
+    width: 40px;
+    transition-duration: 0.3s;
+    /* filter: drop-shadow(2px 2px 4px #000000); */
+}
+
+#schede svg:hover {
+    /* filter: drop-shadow(5px 5px 5px #000000); */
+    scale: 1.5;
+    fill: white;
+
+}
+
+
+#sectionDue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 150px 0px;
+}
+
+.image {
+    width: 600px;
+    height: 400px;
+
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.contenuto2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 400px;
+    margin-left: 100px;
+}
+
+.contenuto2 p {
+    text-align: left;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.google-maps {
+    position: relative;
+    padding-bottom: 75%;
+    /* Definisco l'aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.google-maps>iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+footer {
+    background-color: black;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#indirizzi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+address {
+    width: 290px;
+    height: 220px;
+    padding: 20px 150px;
+}
+
+footer h6,
+footer p {
+    font-size: 0.6em;
+    letter-spacing: 3px;
+}
+
+footer a:link,
+footer a:visited {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    transition-duration: 0.3s;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 200px;
+}
+
+
+.torna-su {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.torna-su svg {
+    fill: rgba(255, 255, 255, 0.6);
+    width: 30px;
+    transition-duration: 0.3s;
+}
+
+.torna-su svg:hover {
+    scale: 1.5;
+    fill: white;
+}
