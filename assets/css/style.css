@@ -10,9 +10,13 @@ body {
 }
 
 header {
+    width: 100%;
+    display: flex;
+    margin: 0;
+    position: fixed;
     top: 0;
-    position: sticky;
     z-index: 1000;
+    background-color: hsl(200, 18%, 10%, 0.3);
 }
 
 .navigazione {
@@ -20,8 +24,7 @@ header {
     align-items: center;
     justify-content: center;
     margin: auto;
-    padding: 15px 0px;
-    background-color: #141A1D;
+    padding: 15px 0px;  
 }
 
 .navigazione div {
@@ -61,7 +64,7 @@ header {
 
 .contenuto {
     position: absolute;
-    top: 250px;
+    top: 200px;
     width: 1500px;
     color: rgba(255, 255, 255, 0.6);
     text-align: center;
@@ -132,7 +135,7 @@ h1 {
 
 #schede {
     position: absolute;
-    top: 720px;
+    top: 600px;
     display: flex;
     text-align: center;
     align-items: center;
