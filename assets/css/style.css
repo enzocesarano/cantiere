@@ -1,279 +1,388 @@
-@media screen and (max-width: 576px) {
-    body {
-        background-color: #141A1D;
-        font-family: "Open Sans", sans-serif;
-        line-height: 1.65;
-        font-size: 1.2rem;
+body {
+    background-color: #141A1D;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.65;
+    font-size: 1.2rem;
+}
+
+.logo img {
+    width: 200px;
+}
+
+header {
+    top: 0;
+    position: sticky;
+    z-index: 1000;
+}
+
+.navigazione {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 15px 0px;
+    background-color: #141A1D;
+}
+
+.navigazione div {
+    display: inline;
+    padding: 0px 100px;
+}
+
+.navigazione a:link,
+.navigazione a:visited {
+    text-decoration: none;
+    color: rgb(133, 130, 130);
+    transition-duration: 0.3s;
+}
+
+.navigazione a:hover {
+    color: white;
+}
+
+
+#articoloPrimo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#video {
+    width: 100%;
+    height: 800px;
+}
+
+#video video {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.contenuto {
+    position: absolute;
+    top: 250px;
+    width: 1500px;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+}
+
+.contenuto svg {
+    fill: rgba(255, 255, 255, 0.6);
+    width: 120px;
+}
+
+h1,
+h2,
+.contenuto p {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+h1 {
+    font-size: 4.8em;
+    font-weight: 900;
+    letter-spacing: 10px;
+}
+
+
+.spin {
+    animation: spin 10s linear infinite, opacity 6s linear
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
     }
 
-    .logo img {
-        width: 200px;
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
     }
 
-    header {
-        top: 0;
-        position: sticky;
-        z-index: 1000;
+    20% {
+        opacity: 0;
     }
 
-    s.navigazione {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: auto;
-        padding: 15px 0px;
-        background-color: #141A1D;
+    100% {
+        opacity: 1;
+    }
+}
+
+.animated {
+    animation: opacity 6s linear;
+}
+
+
+.contenuto p {
+    /* text-shadow: 2px 2px 4px #000000; */
+    font-size: 1.6em;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+
+#schede {
+    position: absolute;
+    top: 720px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.scheda1 {
+    margin: 40px;
+    font-size: 1em !important;
+}
+
+/* TIME COMPARSA SCHEDE SERVIZI */
+
+@keyframes opacity2 {
+    from {
+        opacity: 0;
     }
 
-    .navigazione div {
-        display: inline;
-        padding: 0px 100px;
+    90% {
+        opacity: 0;
     }
 
-    .navigazione a:link,
-    .navigazione a:visited {
-        text-decoration: none;
-        color: rgb(133, 130, 130);
-        transition-duration: 0.3s;
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.schedaServ1 {
+    animation: opacity2 2s linear;
+}
+
+.schedaServ2 {
+    animation: opacity2 2.5s linear;
+}
+
+.schedaServ3 {
+    animation: opacity2 3s linear;
+}
+
+.schedaServ4 {
+    animation: opacity2 3.5s linear;
+}
+
+.schedaServ5 {
+    animation: opacity2 4s linear;
+}
+
+.schedaServ6 {
+    animation: opacity2 4.5s linear;
+}
+
+
+/* TIME COMPARSA SCHEDE SERVIZI */
+
+.scheda1 p {
+    font-weight: bolder;
+    padding-top: 25px;
+}
+
+#schede svg {
+    fill: rgba(255, 255, 255, 0.6);
+    width: 40px;
+    transition-duration: 0.3s;
+}
+
+#schede svg:hover {
+    scale: 1.5;
+    fill: white;
+
+}
+
+
+#sectionDue {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 150px 0px;
+}
+
+.image {
+    width: 600px;
+    height: 400px;
+
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.contenuto2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 400px;
+    margin-left: 100px;
+}
+
+.contenuto2 p {
+    text-align: left;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+footer {
+    background-color: black;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#indirizzi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+address {
+    width: 290px;
+    height: 220px;
+    padding: 20px 150px;
+}
+
+footer h6,
+footer p {
+    font-size: 0.6em;
+    letter-spacing: 3px;
+}
+
+footer a:link,
+footer a:visited {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    transition-duration: 0.3s;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 200px;
+}
+
+
+#tornaSuBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+}
+
+.torna-su svg {
+    fill: rgb(255, 255, 255, 0.6);
+    width: 30px;
+    transition-duration: 0.3s;
+}
+
+.torna-su svg:hover {
+    scale: 1.2;
+    fill: rgb(255, 255, 255);
+}
+
+strong {
+    font-weight: bolder;
+}
+
+@keyframes opacity3 {
+    from {
+        opacity: 0;
     }
 
-    .navigazione a:hover {
-        color: white;
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes opacity4 {
+    from {
+        opacity: 1;
     }
 
-
-    #articoloPrimo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    100% {
+        opacity: 0;
     }
+}
 
-    #video {
-        width: 100%;
-        height: 800px;
-    }
+.servizi {
+    display: none;
+    animation: opacity3 1s linear;
+}
 
-    #video video {
-        width: 100%;
-        height: 800px;
-        object-fit: cover;
-        filter: brightness(50%);
-    }
-
-    .contenuto {
-        position: absolute;
-        top: 250px;
-        width: 1500px;
-        color: rgba(255, 255, 255, 0.6);
-        text-align: center;
-    }
-
-    .contenuto svg {
-        fill: rgba(255, 255, 255, 0.6);
-        width: 120px;
-    }
-
-    h1,
-    h2,
-    .contenuto p {
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-    }
-
-    h1 {
-        font-size: 4.8em;
-        font-weight: 900;
-        letter-spacing: 10px;
-    }
+.sectionServizi {
+    display: flex;
+    border-radius: 10px;
+    width: 100%;
+    height: 350px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(189, 189, 189);
+    margin: 50px;
+}
 
 
-    .spin {
-        animation: spin 10s linear infinite, opacity 4s linear
-    }
+.immagine {
+    width: 250px;
+    height: 250px;
+}
 
-    @keyframes spin {
-        from {
-            transform: rotate(0deg);
-        }
+.immagine img {
+    border-radius: 5%;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
 
-        100% {
-            transform: rotate(1turn);
-        }
-    }
+.descrizione {
+    display: flex;
+    width: 800px;
+    height: 250px;
+    overflow: hidden;
+    padding-left: 50px;
+}
 
-    @keyframes opacity {
-        from {
-            opacity: 0;
-        }
+.descrizione p {
+    text-align: left;
+    margin: auto;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 3.5px;
+    color: rgba(0, 0, 0, 0.6);
+}
 
-        100% {
-            opacity: 1;
-        }
-    }
+.lista p {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
 
-    .animated {
-        animation: opacity 4s linear;
-    }
-
-
-    .contenuto p {
-        /* text-shadow: 2px 2px 4px #000000; */
-        font-size: 1.6em;
-        font-weight: 600;
-        letter-spacing: 4px;
-    }
-
-
-    #schede {
-        position: absolute;
-        top: 720px;
-        display: flex;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        color: rgba(255, 255, 255, 0.6);
-    }
-
-    .scheda1 {
-        margin: 40px;
-        font-size: 0.8em !important;
-        /* text-shadow: 2px 2px 4px #000000; */
-    }
-
-
-    .scheda1 h2 {
-        font-weight: bolder;
-        padding-top: 25px;
-    }
-
-    #schede svg {
-        fill: rgba(255, 255, 255, 0.6);
-        width: 40px;
-        transition-duration: 0.3s;
-        /* filter: drop-shadow(2px 2px 4px #000000); */
-    }
-
-    #schede svg:hover {
-        /* filter: drop-shadow(5px 5px 5px #000000); */
-        scale: 1.5;
-        fill: white;
-
-    }
-
-
-    #sectionDue {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 150px 0px;
-    }
-
-    .image {
-        width: 600px;
-        height: 400px;
-
-    }
-
-    .image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-
-    .contenuto2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 600px;
-        height: 400px;
-        margin-left: 100px;
-    }
-
-    .contenuto2 p {
-        text-align: left;
-        font-size: 1.6rem;
-        font-weight: 600;
-        letter-spacing: 4px;
-        color: rgba(255, 255, 255, 0.6);
-    }
-
-    .google-maps {
-        position: relative;
-        padding-bottom: 75%;
-        /* Definisco l'aspect ratio */
-        height: 0;
-        overflow: hidden;
-    }
-
-    .google-maps>iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100% !important;
-        height: 100% !important;
-    }
-
-    footer {
-        background-color: black;
-        color: rgba(255, 255, 255, 0.6);
-    }
-
-    #indirizzi {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 15px;
-    }
-
-    address {
-        width: 290px;
-        height: 220px;
-        padding: 20px 150px;
-    }
-
-    footer h6,
-    footer p {
-        font-size: 0.6em;
-        letter-spacing: 3px;
-    }
-
-    footer a:link,
-    footer a:visited {
-        text-decoration: none;
-        color: rgba(255, 255, 255, 0.6);
-        transition-duration: 0.3s;
-    }
-
-    footer a:hover {
-        color: white;
-    }
-
-    .copy {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 30px 200px;
-    }
-
-
-    .torna-su {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-    }
-
-    .torna-su svg {
-        fill: rgba(255, 255, 255, 0.6);
-        width: 30px;
-        transition-duration: 0.3s;
-    }
-
-    .torna-su svg:hover {
-        scale: 1.5;
-        fill: white;
-    }
-
+.lista ul {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: rgba(0, 0, 0, 0.6);
 }
