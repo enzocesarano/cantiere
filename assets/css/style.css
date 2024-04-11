@@ -123,6 +123,7 @@ h1 {
 
 .contenuto p {
     /* text-shadow: 2px 2px 4px #000000; */
+    font-style: italic;
     font-size: 1.6em;
     font-weight: 600;
     letter-spacing: 4px;
@@ -197,6 +198,7 @@ h1 {
     fill: rgba(255, 255, 255, 0.6);
     width: 40px;
     transition-duration: 0.3s;
+    cursor: pointer;
 }
 
 #schede svg:hover {
@@ -236,6 +238,7 @@ h1 {
 }
 
 .contenuto2 p {
+    font-style: italic;
     text-align: left;
     font-size: 1.6rem;
     font-weight: 600;
