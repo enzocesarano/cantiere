@@ -1,5 +1,5 @@
 body {
-    background-color: #141A1D;
+    background-color: rgb(20, 26, 29);
     font-family: "Open Sans", sans-serif;
     line-height: 1.65;
     font-size: 1.2rem;
@@ -16,7 +16,8 @@ header {
     position: fixed;
     top: 0;
     z-index: 1000;
-    background-color: hsl(200, 18%, 10%, 0.3);
+    background-color: rgba(21, 27, 30, 0.3);
+    transition: 0.5s;
 }
 
 .navigazione {
@@ -24,7 +25,7 @@ header {
     align-items: center;
     justify-content: center;
     margin: auto;
-    padding: 15px 0px;  
+    padding: 15px 0px;
 }
 
 .navigazione div {
@@ -125,7 +126,6 @@ h1 {
 
 
 .contenuto p {
-    /* text-shadow: 2px 2px 4px #000000; */
     font-style: italic;
     font-size: 1.6em;
     font-weight: 600;
@@ -206,10 +206,13 @@ h1 {
 
 #schede svg:hover {
     scale: 1.5;
-    fill: white;
-
+    fill: rgb(255, 255, 255);
 }
 
+#schede .click svg {
+    scale: 1.5;
+    fill: #ffd700;
+}
 
 #sectionDue {
     display: flex;
@@ -335,53 +338,71 @@ strong {
     }
 }
 
+#divEsternoServizi {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 50px 0px 50px 0px;
+}
+
+#divEsternoServizi:hover> :not(:hover) {
+    opacity: 0.4;
+    scale: 0.95;
+    filter: grayscale(1)
+}
+
 .servizi {
     display: none;
     animation: opacity3 1s linear;
+    transition: 0.5s;
 }
+
+.sectionServizi span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    opacity: 0.5;
+    color: #000000;
+}
+
 
 .sectionServizi {
     display: flex;
+    flex-direction: column;
     border-radius: 10px;
-    width: 100%;
+    width: 280px;
     height: 350px;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    background-repeat: no-repeat;
+    background-position: 90% 95%;
+    background-size: 20%;
     background-color: rgb(189, 189, 189);
-    margin: 50px;
-}
-
-
-.immagine {
-    width: 250px;
-    height: 250px;
+    cursor: pointer;
 }
 
 .immagine img {
-    border-radius: 5%;
-    width: 100%;
-    height: 250px;
+    border-radius: 10px 10px 0px 0px;
+    width: 280px;
+    height: 200px;
     object-fit: cover;
 }
 
+
 .descrizione {
     display: flex;
-    width: 800px;
-    height: 250px;
-    overflow: hidden;
-    padding-left: 50px;
-}
-
-.descrizione p {
-    text-align: left;
-    margin: auto;
-    font-size: 1.2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.8rem;
     font-weight: 600;
-    letter-spacing: 3.5px;
-    color: rgba(0, 0, 0, 0.6);
+    color: rgb(0, 0, 0);
+    width: 230px;
+    height: 100px;
 }
 
-.lista p {
+
+/* .lista p {
     font-size: 0.9rem;
     font-weight: 600;
 }
@@ -392,3 +413,4 @@ strong {
     letter-spacing: 3px;
     color: rgba(0, 0, 0, 0.6);
 }
+ */

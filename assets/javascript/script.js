@@ -1,39 +1,38 @@
 const nav = document.getElementById('header');
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    if (scrollTop > 700) {
-        nav.style.backgroundColor = 'hsl(200, 18%, 10%)';
+    if (scrollTop > 100) {
+        nav.style.backgroundColor = 'rgba(21, 27, 30)';
     } else {
-        nav.style.backgroundColor = 'hsla(200, 18%, 10%, 0.5)';
+        nav.style.backgroundColor = 'rgba(21, 27, 30, 0.3)';
     }
 });
 
-function add(id1, id2, id3, id4, id5, id6) {
+
+
+
+
+function add(id1, id2) {
     const div1 = document.getElementById(id1);
-    const div2 = document.getElementById(id2);
-    const div3 = document.getElementById(id3);
-    const div4 = document.getElementById(id4);
-    const div5 = document.getElementById(id5);
-    const div6 = document.getElementById(id6);
+    const btn = document.getElementById(id2);
 
     let comparsaDisplay = window.getComputedStyle(div1).getPropertyValue('display');
 
     if (comparsaDisplay === 'none') {
-        div2.style.display = 'none';
-        div3.style.display = 'none';
-        div4.style.display = 'none';
-        div5.style.display = 'none';
-        div6.style.display = 'none';
         div1.style.display = 'flex';
-        window.scrollTo({ top: 500, behavior: 'smooth' });
+        window.scrollTo({ top: 400, behavior: 'smooth' });
         div1.style.animation = null;
+        btn.classList.add('click');
     } else {
         div1.style.animation = 'opacity4 0.3s linear';
         setTimeout(() => {
             div1.style.display = 'none';
         }, 300);
+        btn.classList.remove('click');
     }
+
+
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -42,13 +41,12 @@ function add(id1, id2, id3, id4, id5, id6) {
                 setTimeout(() => {
                     div1.style.display = 'none';
                 }, 300);
-            }
+            } else { }
         });
     });
 
     observer.observe(div1)
 }
-
 
 const tornaSu = document.getElementById('tornaSuBtn');
 let comparsaTornaSu = window.getComputedStyle(tornaSu).getPropertyValue('display');
