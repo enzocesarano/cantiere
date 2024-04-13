@@ -3,13 +3,11 @@ const nav = document.getElementById('header');
 window.addEventListener('scroll', function () {
     const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     if (scrollTop > 100) {
-        nav.style.backgroundColor = 'rgba(21, 27, 30)';
+        nav.style.backgroundColor = 'rgba(20, 29, 29)';
     } else {
-        nav.style.backgroundColor = 'rgba(21, 27, 30, 0.3)';
+        nav.style.background = 'linear-gradient(rgba(20, 26, 29, 0.7), rgba(20, 26, 29, 0)';
     }
 });
-
-
 
 
 
@@ -21,7 +19,7 @@ function add(id1, id2) {
 
     if (comparsaDisplay === 'none') {
         div1.style.display = 'flex';
-        window.scrollTo({ top: 400, behavior: 'smooth' });
+        window.scrollTo({ top: 350, behavior: 'smooth' });
         div1.style.animation = null;
         btn.classList.add('click');
     } else {
@@ -34,6 +32,8 @@ function add(id1, id2) {
 
 
 
+
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (!entry.isIntersecting) {
@@ -41,6 +41,7 @@ function add(id1, id2) {
                 setTimeout(() => {
                     div1.style.display = 'none';
                 }, 300);
+                btn.classList.remove('click');
             } else { }
         });
     });

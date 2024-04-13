@@ -16,7 +16,7 @@ header {
     position: fixed;
     top: 0;
     z-index: 1000;
-    background-color: rgba(21, 27, 30, 0.3);
+    background: linear-gradient(rgba(20, 26, 29, 0.7), rgba(20, 26, 29, 0));
     transition: 0.5s;
 }
 
@@ -36,7 +36,7 @@ header {
 .navigazione a:link,
 .navigazione a:visited {
     text-decoration: none;
-    color: rgb(133, 130, 130);
+    color: rgba(255, 255, 255, 0.603);
     transition-duration: 0.3s;
 }
 
@@ -74,6 +74,13 @@ header {
 .contenuto svg {
     fill: rgba(255, 255, 255, 0.6);
     width: 120px;
+}
+
+h1 span {
+    background: linear-gradient(to bottom, rgb(207, 192, 159, 0.6) 27%, rgb(224, 200, 125, 0.6) 40%, rgb(136, 99, 25, 0.6) 68%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #fff;
 }
 
 h1,
@@ -135,12 +142,15 @@ h1 {
 
 #schede {
     position: absolute;
-    top: 600px;
+    top: 555px;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
     color: rgba(255, 255, 255, 0.6);
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(0deg, rgba(20, 26, 29, 1) 12%, rgba(20, 26, 29, 0.8799894957983193) 23%, rgba(20, 26, 29, 0.6502976190476191) 35%, rgba(20, 26, 29, 0) 57%);
 }
 
 .scheda1 {
@@ -155,7 +165,7 @@ h1 {
         opacity: 0;
     }
 
-    90% {
+    25% {
         opacity: 0;
     }
 
@@ -166,27 +176,27 @@ h1 {
 
 
 .schedaServ1 {
-    animation: opacity2 2s linear;
-}
-
-.schedaServ2 {
-    animation: opacity2 2.5s linear;
-}
-
-.schedaServ3 {
-    animation: opacity2 3s linear;
-}
-
-.schedaServ4 {
-    animation: opacity2 3.5s linear;
-}
-
-.schedaServ5 {
     animation: opacity2 4s linear;
 }
 
+.schedaServ2 {
+    animation: opacity2 4.4s linear;
+}
+
+.schedaServ3 {
+    animation: opacity2 4.8s linear;
+}
+
+.schedaServ4 {
+    animation: opacity2 5.2s linear;
+}
+
+.schedaServ5 {
+    animation: opacity2 5.6s linear;
+}
+
 .schedaServ6 {
-    animation: opacity2 4.5s linear;
+    animation: opacity2 6s linear;
 }
 
 
@@ -211,7 +221,7 @@ h1 {
 
 #schede .click svg {
     scale: 1.5;
-    fill: #ffd700;
+    fill: rgb(205, 164, 52);
 }
 
 #sectionDue {
@@ -343,7 +353,7 @@ strong {
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
-    margin: 50px 0px 50px 0px;
+    margin: 30px 0px 30px 0px;
 }
 
 #divEsternoServizi:hover> :not(:hover) {
